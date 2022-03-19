@@ -2,6 +2,8 @@ import { ToastContainer } from 'react-toastify'
 import { Switch, BrowserRouter as Router, Route } from 'react-router-dom'
 import { Header, Menu } from 'components'
 import { Suspense, lazy } from 'react'
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
 
 const HomePage = lazy(() => import('./pages/Home'))
 
