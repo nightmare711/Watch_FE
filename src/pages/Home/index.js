@@ -2,6 +2,9 @@ import React from 'react'
 import { Container } from 'components'
 import Banner_1 from 'assets/home/banner_1.jpeg'
 import Banner_2 from 'assets/home/banner_2.jpeg'
+import Promo_1 from 'assets/home/banner_small_1.webp'
+import Promo_2 from 'assets/home/banner_small_2.webp'
+import Promo_3 from 'assets/home/banner_small_3.webp'
 import Slider from 'react-slick'
 import './styles.scss'
 
@@ -49,8 +52,41 @@ const HomePage = () => {
 				</div>
 			</Slider>
 			<Container>
-				<div className=''></div>
+				<div className='promo'>
+					<div className='promo__item'>
+						<img src={Promo_1} alt='Promo' />
+						<div className='promo__item--text'>
+							<span className='content'>Design Creative</span>
+							<span className='title'>Modern And Clean</span>
+							<span className='content'>From $60.99 - Sale 20%</span>
+						</div>
+					</div>
+					<div className='promo__item'>
+						<img src={Promo_2} alt='Promo' />
+						<div className='promo__item--text'>
+							<span className='content'>Design Creative</span>
+							<span className='title'>Modern And Clean</span>
+							<span className='content'>From $60.99 - Sale 20%</span>
+						</div>
+					</div>
+					<div className='promo__item'>
+						<img src={Promo_3} alt='Promo' />
+						<div className='promo__item--text'>
+							<span className='content'>Design Creative</span>
+							<span className='title'>Modern And Clean</span>
+							<span className='content'>From $60.99 - Sale 20%</span>
+						</div>
+					</div>
+				</div>
+				<span className='tweet'>
+					Check out "Alice - Multipurpose Responsive #Magento #Theme" on #Envato by @Plazathemes
+					#Themeforest:{' '}
+					<a href='https://watch-fe.vercel.app/' target='_blank' rel='noreferrer'>
+						https://t.co/DNdhAwzm88
+					</a>
+				</span>
 			</Container>
+			<div className='line' />
 		</div>
 	)
 }

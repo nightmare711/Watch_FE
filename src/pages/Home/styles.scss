@@ -46,4 +46,45 @@
             }
         }
     }
+    .promo {
+        margin: 70px 0px 40px 0px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 30px;
+        &__item {
+            position:relative;
+            overflow: hidden;
+            height:240px;
+            cursor: pointer;
+            &:hover img{
+                transform: scale(1.05);
+            }
+            img {
+                border-radius: 10px;
+                transition:all .3s;
+            }
+            &--text {
+                position:absolute;
+                display: flex;
+                flex-direction: column;
+                top:50%;
+                left:25px;
+                .title {
+                    color: $color-normal-brown;
+                    font-family: 'Prata';
+                    font-size: 28px;
+                    margin: 7px 0px;
+                }
+            }
+        }
+    }
+    .tweet {
+        text-align: center;
+        display: block;
+        width: 100%;
+        margin-bottom: 40px;
+        a {
+            color: $color-normal-brown;
+        }
+    }
 }
