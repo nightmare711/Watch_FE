@@ -1,0 +1,22 @@
+.footermenu{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 40px;
+    box-sizing: border-box;
+    border-top: 2px solid #2d2d2d;
+    border-bottom: 2px solid #2d2d2d;
+    ul{
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        li{
+            font-size: 15px;
+            color: #afafaf;
+            &:not(:last-child) {
+                margin-right:50px;
+            }
+        }
+    }
+}
