@@ -1,3 +1,4 @@
+@import "../../../../styles/index.scss";
 .footermenu{
     width: 100%;
     display: flex;
@@ -12,10 +13,16 @@
         flex-direction: row;
         list-style: none;
         li{
+            cursor: pointer;
+            font-weight: 550;
             font-size: 15px;
             color: #afafaf;
+            transition: all 0.5;
             &:not(:last-child) {
                 margin-right:50px;
+            }
+            &:hover{
+                color: $color-normal-brown;
             }
         }
     }
