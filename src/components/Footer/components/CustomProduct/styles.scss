@@ -1,0 +1,34 @@
+@import "../../../../styles/index.scss";
+
+.custom__product{
+    display: flex;
+    padding: 10px 0;
+    .product__img{
+        width: 80px;
+        height: 80px;
+        margin-right: 15px;
+    }
+    .product__info{
+        display: flex;
+        flex-direction: column;
+        left: 0%;
+        .rating{
+            color: $color-normal-brown;
+            margin-bottom: 5px;
+        }
+        .name{
+            color: #ffffff;
+            font-size: 20px;
+            transition: all 0.3s;
+            cursor: pointer;
+            margin-bottom: 5px;
+        }
+        .name:hover{
+            color: $color-normal-brown;
+        }
+        .price{
+            font-size:14px;
+            color: $color-normal-brown;
+        }
+    }
+}
