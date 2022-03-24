@@ -1,0 +1,50 @@
+@import "../../styles/index.scss";
+
+.blog{
+    display: flex;
+    flex-direction: column;
+    width: 370px;
+    position: relative;
+    &__image{
+        margin: auto;
+        margin-bottom: 15px;
+    }
+    .blog__info{
+        display: flex;
+        justify-content: space-between;
+        .author{
+            font-size: 17px;
+            font-weight: 500;
+            color: #afafaf;
+            margin-bottom: 15px;
+            &__name{
+                color: $color-normal-brown;
+            }
+        }
+        .date{
+            color: $color-normal-brown;
+        }
+    }
+    &__title{
+        margin-bottom: 15px;
+        font-size: 18px;
+        line-height: 30px;
+        letter-spacing: 1.5px;
+        transition: all 0.3s;
+        cursor: pointer;
+    }
+    &__title:hover{
+        color: $color-normal-brown;
+    }
+    &__short{
+        color: #afafaf;
+        font-size: 15px;
+        line-height: 25px;
+        margin-bottom: 15px;
+    }
+    .read__more{
+        color: $color-normal-brown;
+        cursor: pointer;
+        font-weight: 600;
+    }
+}

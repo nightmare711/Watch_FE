@@ -87,4 +87,8 @@
             color: $color-normal-brown;
         }
     }
+    .blog__container{
+        display: flex;
+        justify-content: space-between;
+      }
 }
