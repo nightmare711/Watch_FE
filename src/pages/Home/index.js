@@ -9,6 +9,8 @@ import Promo_3 from 'assets/home/banner_small_3.webp'
 import Blog_1 from 'assets/home/blog_1.webp'
 import Blog_2 from 'assets/home/blog_2.webp'
 import Blog_3 from 'assets/home/blog_3.webp'
+import medium_banner from 'assets/home/medium_banner.webp'
+import medium_banner_2 from 'assets/home/medium_banner_2.webp'
 import Slider from 'react-slick'
 import './styles.scss'
 
@@ -158,6 +160,26 @@ const HomePage = () => {
 						placeholder='Enter your email address here...'
 					></input>
 					<div className='new__sletter__submit__btn'>Subscribe</div>
+				</div>
+			</div>
+			<div className='promo'>
+				<div className='promo__side'>
+					<img src={medium_banner} alt='Promo' />
+					<div className='promo__text'>
+						<span className='promo__title'>New Arrivals 2022</span>
+						<span className='promo__name'>Luxury Perfume 2022</span>
+						<span className='promo__price'>Men's And Woman's Accessories</span>
+						<span className='promo__link'>Discover Now</span>
+					</div>
+				</div>
+				<div className='promo__side'>
+					<img src={medium_banner_2} alt='Promo' />
+					<div className='promo__text'>
+						<span className='promo__title'>Trending Products 2022</span>
+						<span className='promo__name'>Maurice Lacroix Watch</span>
+						<span className='promo__price'>Only From $162.00 - Sale 20% Off</span>
+						<span className='promo__link'>Discover Now</span>
+					</div>
 				</div>
 			</div>
 			<div className='line' />
