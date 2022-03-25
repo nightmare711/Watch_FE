@@ -1,5 +1,4 @@
 @import '../../styles/index.scss';
-
 .homepage {
     &__banner {
         position:relative;
@@ -43,6 +42,11 @@
                 text-align: center;
                 padding:12px 0px;
                 margin:10px 0px;
+                cursor: pointer;
+                transition: all 0.3s;
+            }
+            .btn-now:hover{
+                background-color: $color-normal-brown;
             }
         }
     }
@@ -87,8 +91,117 @@
             color: $color-normal-brown;
         }
     }
-    .blog__container{
+    .blog__form{
+        margin-bottom: 30px;
         display: flex;
-        justify-content: space-between;
-      }
+        align-items: center;
+        justify-content:row;
+        .form{
+            font-size:30px;
+            color: #ffffff;
+        }
+    }
+    .bannner__area{
+        text-align: center;
+        display: flex;
+        justify-content:center;
+        flex-direction: column;
+        background-image: url('../../assets/home/big_banner.webp');
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-bottom: 50px;
+        padding: 100px 0;
+        .banner__label{
+            color: $color-normal-brown;
+            margin-bottom: 5px;
+            font-size:16px
+        }
+        .banner__name{
+            color: #ffffff;
+            font-size: 48px;
+            margin-bottom: 25px;
+        }
+        .banner__text{
+            color: #afafaf;
+            font-size:16px;
+            margin-bottom: 50px;
+        }
+        .btn-now {
+            width:150px;
+            border:2px solid $color-normal-brown;
+            border-radius: 5px;
+            text-align: center;
+            padding:12px 0px;
+            margin: auto;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .btn-now:hover{
+            background-color: $color-normal-brown;
+        }
+    }
+    .btn-insta {
+        width:150px;
+        border:2px solid $color-normal-brown;
+        border-radius: 5px;
+        background-color: $color-normal-brown;
+        text-align: center;
+        padding:12px 0px;
+        cursor: pointer;
+        transition: all 0.3s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin:50px auto;
+        .insta__text{
+            margin-left: 5px;
+        }
+    }
+    .btn-insta:hover{
+        background-color: #242424;
+    }
+    .new__sletter{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        &__head{
+            font-size:27px;
+            margin-bottom: 10px;
+        }
+        &__text{
+            font-size: 15px;
+            color: #afafaf;
+            padding:0 300px;
+            letter-spacing: 1px;
+        }
+        &__group{
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            margin:50px auto;
+            .new__sletter__email{
+                height:50px;
+                width: 500px;
+                padding: 0 20px;
+                background-color: transparent;
+                outline: none;
+                color: #ffffff;
+                border-radius:3px;
+                border: 1px solid #858585;
+                margin-right: 10px;
+            }
+            .new__sletter__submit__btn{
+                width:180px;
+                border-radius: 2px;
+                background-color: #313030;
+                text-align: center;
+                padding: 17px 0;
+                cursor: pointer;
+                transition: all 0.3s;
+            }
+            .new__sletter__submit__btn:hover{
+                background-color: $color-normal-brown;
+            }
+        }
+    }
 }

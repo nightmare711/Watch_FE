@@ -1,5 +1,6 @@
 import React from 'react'
 import { Container, BlogCard } from 'components'
+import InstagramIcon from '@mui/icons-material/Instagram'
 import Banner_1 from 'assets/home/banner_1.jpeg'
 import Banner_2 from 'assets/home/banner_2.jpeg'
 import Promo_1 from 'assets/home/banner_small_1.webp'
@@ -89,8 +90,27 @@ const HomePage = () => {
 					</a>
 				</span>
 				<div className='line' />
-				<div className='bannner__area'></div>
-				<div className='blog__container'>
+			</Container>
+			<div className='bannner__area'>
+				<span className='banner__label'>Sale Off 20% All Products</span>
+				<span className='banner__name'>New Trending Collection</span>
+				<span className='banner__text'>We Believe That Good Design Always In Season</span>
+				<div className='btn-now'>Shop Now</div>
+			</div>
+			<Container>
+				<div className='blog__form'>
+					<span className='form'>From Our Blog</span>
+					<div className='form__line' />
+				</div>
+				<Slider
+					autoplay={true}
+					dots={false}
+					infinite={true}
+					slidesToScroll={1}
+					slidesToShow={3}
+					autoplaySpeed={3000}
+					pauseOnHover={false}
+				>
 					<BlogCard
 						image={Blog_1}
 						name='Kiet Lac'
@@ -112,8 +132,34 @@ const HomePage = () => {
 						title='Mollis aliquet ante, suscipit non eget  nulla libero, vestibulum condimentum.'
 						short='Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula.'
 					/>
-				</div>
+					<BlogCard
+						image={Blog_3}
+						name='Hoan Hat Hay'
+						date='28 Sep 2022'
+						title='Mollis aliquet ante, suscipit non eget  nulla libero, vestibulum condimentum.'
+						short='Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula.'
+					/>
+				</Slider>
 			</Container>
+			<div className='btn-insta'>
+				<InstagramIcon />
+				<span className='insta__text'>Instagram</span>
+			</div>
+			<div className='new__sletter'>
+				<span className='new__sletter__head'>Join Our Newsletters Now!</span>
+				<span className='new__sletter__text'>
+					Typi non habent claritatem insitam est usus legentis in qui facit eorum claritatem,
+					investigationes demonstraverunt lectores legere me lius quod legunt saepius.
+				</span>
+				<div className='new__sletter__group'>
+					<input
+						type='email'
+						className='new__sletter__email'
+						placeholder='Enter your email address here...'
+					></input>
+					<div className='new__sletter__submit__btn'>Subscribe</div>
+				</div>
+			</div>
 			<div className='line' />
 		</div>
 	)
