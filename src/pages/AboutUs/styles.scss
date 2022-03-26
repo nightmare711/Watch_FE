@@ -1,0 +1,162 @@
+@import '../../styles/index.scss';
+.about__us{
+    padding: 30px auto;
+    display: flex;
+    flex-direction: column;
+    .page{
+        text-align: center;
+        margin-top: 30px;
+        font-size:48px;
+        margin-bottom: 20px;
+    }
+    .site__map{
+        text-align: center;
+        margin-bottom: 60px;
+        .site{
+            color: #afafaf;
+            cursor: pointer;
+            transition: all .3s;
+        }
+        .site:nth-child(3){
+            color: $color-normal-brown;
+        }
+        .site:hover{
+            color: $color-normal-brown;
+        }
+        .slash{
+            margin: 0 5px;
+            font-size: #afafaf;
+        }
+    }
+    .about__text{
+        display: flex;
+        justify-content:center;
+        background-color: #2E2E2E;
+        img{
+            width: 50%;
+            height: auto;
+        }
+        &__container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px 40px;
+            .heading{
+                text-transform: uppercase;
+                font-size: 40px;
+                margin-bottom: 40px;
+            }
+            .text{
+                text-align: center;
+                font-size: 15px;
+                line-height: 28px;
+                letter-spacing: 1px;
+                margin-bottom: 40px;
+                color: #afafaf;
+            }
+            .view-btn{
+                width:150px;
+                border-radius: 5px;
+                background-color: $color-normal-brown;
+                text-align: center;
+                padding:15px 0px;
+                cursor: pointer;
+                transition: all 0.3s;
+            }
+            .view-btn:hover{
+                background-color: #3b3b3b;
+            }
+        }
+    }
+    .about__achieve{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .item{
+            width: 23%;
+            height: 200px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            &:nth-child(1)
+            {
+                background-color: #616161;
+            }
+            &:nth-child(2)
+            {
+                background-color: #545454;
+            }
+            &:nth-child(3)
+            {
+                background-color: #616161;
+            }
+            &:nth-child(4)
+            {
+                background-color: #545454;
+            }
+            &__achive{
+                margin-left: 15px;
+                text-transform: uppercase;
+                display: flex;
+                flex-direction: column;
+                .counter {
+                    font-size: 40px;
+                }
+                .achive{
+                    font-size: 15px;
+                    color: #afafaf;
+                }
+            }
+        }
+    }
+    .skill__container{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        height: auto;
+        margin-bottom: 30px;
+        img{
+            width: 50%;
+            height: 400px;
+        }
+        .skill{
+            width: 50%;
+            background-color: #2E2E2E;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 340px !important;
+            padding: 30px 0;
+            .heading{
+                margin-bottom: 30px;
+                text-transform: uppercase;
+                font-size: 40px;
+            }
+            &__progress{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                margin-bottom: 20px;
+                .percent{
+                    border: 3px solid #ffffff;
+                    height: 40px;
+                    width: 40px;
+                    border-radius: 50%;
+                    .number{
+                        display: flex;
+                        text-align: center;
+                        justify-content: center;
+                        margin-top: 25%;
+                    }
+                }
+                .progress{
+                    width: 500px;
+                }
+            }
+        }
+        
+    }
+}
