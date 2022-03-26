@@ -6,6 +6,7 @@ import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 
 const HomePage = lazy(() => import('./pages/Home'))
+const AboutUs = lazy(() => import('./pages/AboutUs'))
 
 function App() {
 	return (
@@ -17,6 +18,7 @@ function App() {
 				<div className='line' />
 				<Switch>
 					<Route component={HomePage} path='/' exact />
+					<Route component={AboutUs} path='/about-us' exact />
 				</Switch>
 				<Footer />
 				<ToastContainer
