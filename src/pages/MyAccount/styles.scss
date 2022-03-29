@@ -1,0 +1,101 @@
+@import '../../styles/index.scss';
+
+.page{
+    margin-top: 30px;
+    font-size:48px;
+    margin-bottom: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+.site__map{
+    text-align: center;
+    margin-bottom: 60px;
+    .site{
+        color: #afafaf;
+        cursor: pointer;
+        transition: all .3s;
+    }
+    .site:nth-child(3){
+        color: $color-normal-brown;
+    }
+    .site:hover{
+        color: $color-normal-brown;
+    }
+    .slash{
+        margin: 0 5px;
+        font-size: #afafaf;
+    }
+}
+.account{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom:50px;
+    .title{
+        font-size: 30px;
+        margin-bottom: 30px;
+    }
+    .text{
+        color: #afafaf;
+        font-size: 15px;
+        margin-bottom: 5px;
+    }
+
+    .input__box{
+        background-color: #242424;
+        padding: 1px 2px 1px 15px;
+        height: 45px;
+        color: #afafaf;
+        outline: none;
+        border: 1px solid #343a40;
+        font-size: 15px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+    }
+    .btn{
+        width:150px;
+        border-radius: 5px;
+        background-color: $color-normal-brown;
+        text-align: center;
+        padding:15px 0px;
+        cursor: pointer;
+        transition: all 0.3s;
+        margin-bottom: 10px;
+    }
+    .btn:hover{
+        background-color: #2e2e2e;
+    }
+    .login{
+        width: 48%;
+        display: flex;
+        flex-direction: column;
+        &__container{
+            display: flex;
+            flex-direction: column;
+            padding: 15px;
+            background-color: #343434;
+            .btn__group{
+                display: flex;
+                flex-direction: column;
+                .remember{
+                    display: flex;
+                    align-items: center;
+                }
+                .checkbox{
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+    .register{
+        width: 48%;
+        display: flex;
+        flex-direction: column;
+        &__container{
+            display: flex;
+            flex-direction: column;
+            padding: 15px;
+            background-color: #343434;
+        }
+    }
+}
