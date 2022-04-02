@@ -3,15 +3,9 @@ import React from 'react'
 
 import './styles.scss'
 
-const MyAccount = () => {
+const SignInUp = () => {
 	return (
 		<Container>
-			<span className='page'>Account</span>
-			<div className='site__map'>
-				<span className='site'>Home</span>
-				<span className='slash'>/</span>
-				<span className='site'>Account</span>
-			</div>
 			<div className='account'>
 				<div className='login'>
 					<span className='title'>LOGIN</span>
@@ -59,4 +53,4 @@ const MyAccount = () => {
 	)
 }
 
-export default MyAccount
+export default SignInUp
