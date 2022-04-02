@@ -1,0 +1,35 @@
+@import '../../styles/index.scss';
+.blog__container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 0 120px;
+    row-gap: 30px;
+    margin-bottom: 50px;
+}
+.page{
+    margin-top: 30px;
+    font-size:48px;
+    margin-bottom: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+.site__map{
+    text-align: center;
+    margin-bottom: 60px;
+    .site{
+        color: #afafaf;
+        cursor: pointer;
+        transition: all .3s;
+    }
+    .site:nth-child(3){
+        color: $color-normal-brown;
+    }
+    .site:hover{
+        color: $color-normal-brown;
+    }
+    .slash{
+        margin: 0 5px;
+        font-size: #afafaf;
+    }
+}
