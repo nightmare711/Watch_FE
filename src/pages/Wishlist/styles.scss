@@ -1,0 +1,86 @@
+@import '../../styles/index.scss';
+.page{
+    margin-top: 30px;
+    font-size:48px;
+    margin-bottom: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+.site__map{
+    text-align: center; 
+    margin-bottom: 60px;
+    .site{
+        color: #afafaf;
+        cursor: pointer;
+        transition: all .3s;
+    }
+    .site:nth-child(3){
+        color: $color-normal-brown;
+    }
+    .site:hover{
+        color: $color-normal-brown;
+    }
+    .slash{
+        margin: 0 5px;
+        font-size: #afafaf;
+    }
+}
+.btn {
+    display: flex;
+    width: fit-content;
+    background-color:  $color-normal-brown;
+    border-radius: 5px;
+    text-align: center;
+    padding:12px 15px;
+    margin: auto;
+    cursor: pointer;
+    transition: all 0.3s;
+    border-radius: 5px;
+    color: white;
+}
+.btn:hover{
+    background-color: #6c757d;
+}
+.cart{
+    background-color: #343434;
+    color: #afafaf;
+    width: 100%;
+    .table__container{
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 50px;
+        border-style: hidden;
+        border-bottom: 1px solid $color-primary;
+        .head{
+            text-align: center;
+            padding: 20px 30px;
+            font-size: 20px;
+            text-transform: uppercase;
+            border: 1px solid $color-primary;
+            color: white;
+            border-bottom: 1px solid white;
+        }
+        .item{
+            text-align: center;
+            font-size: 23px;
+            padding: 15px 20px;
+            border: 1px solid $color-primary;
+            .product__img{
+                width: 75px;
+                height: 75px;
+            }
+            .quantity{
+                width: 30px;
+                height: 50px;
+                border-radius: 5px;
+                outline: none;
+                border: none;
+                background-color: #2e2e2e;
+                padding: 0 20px;
+                color: #afafaf;
+                font-size: 23px;
+            }
+        }
+    }
+}
