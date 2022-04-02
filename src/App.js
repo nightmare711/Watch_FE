@@ -13,6 +13,7 @@ const Cart = lazy(() => import('./pages/Cart'))
 const Wishlist = lazy(() => import('./pages/Wishlist'))
 const MyAccount = lazy(() => import('./pages/MyAccount'))
 const FAQ = lazy(() => import('./pages/FAQ'))
+const NotFound = lazy(() => import('./pages/404'))
 
 function App() {
 	return (
@@ -31,6 +32,7 @@ function App() {
 					<Route component={Wishlist} path='/wishlist' exact />
 					<Route component={MyAccount} path='/my-account' exact />
 					<Route component={FAQ} path='/faq' exact />
+					<Route component={NotFound} path='/404' exact />
 				</Switch>
 				<Footer />
 				<ToastContainer
