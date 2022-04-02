@@ -13,7 +13,7 @@ export const BlogCard = (props) => {
 			</div>
 			<span className='blog__title'>{props.title}</span>
 			<span className='blog__short'>{props.short}</span>
-			<span className='read__more'>Read More</span>
+			<div className='btn'>Read More</div>
 		</div>
 	)
 }
