@@ -37,6 +37,8 @@
         .posts{
             padding: 15px;
             background-color: #343434;
+            margin-bottom: 40px;
+
         }
         .title{
             font-size: 30px;
@@ -57,6 +59,28 @@
             }
             .date:not(:last-child){
                 margin-bottom: 15px;
+            }
+        }
+        .tags{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            row-gap: 15px;
+            padding: 15px;
+            background-color: #343434;
+
+            .tag{
+                padding: 5px 10px;
+                color: #afafaf;
+                width: fit-content;
+                border: 1px solid #afafaf;
+                border-radius: 5px;   
+                transition: all .3s;   
+                cursor: pointer;   
+                margin-right: 10px;       
+            }
+            .tag:hover{
+                color: $color-normal-brown;
+                border: 1px solid $color-normal-brown;
             }
         }
         .search__box{

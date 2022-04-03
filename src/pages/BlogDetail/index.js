@@ -93,6 +93,19 @@ const BlogDetail = () => {
 							<Post src={item.image} title={item.title} date={item.date} />
 						))}
 					</div>
+					<span className='title'>Tag</span>
+					<div className='tags'>
+						<div className='tag'>Chilled</div>
+						<div className='tag'>Dark</div>
+						<div className='tag'>Euro</div>
+						<div className='tag'>Fashion</div>
+						<div className='tag'>Food</div>
+						<div className='tag'>Hardware</div>
+						<div className='tag'>Hat</div>
+						<div className='tag'>Hipster</div>
+						<div className='tag'>Holiday</div>
+						<div className='tag'>Light</div>
+					</div>
 				</div>
 				<div className='blog'>
 					<img src={Blog_1} alt='Blog Image' className='blog__image' />
