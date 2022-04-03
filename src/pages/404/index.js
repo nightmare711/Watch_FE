@@ -1,5 +1,6 @@
 import React from 'react'
 import { Container } from 'components'
+import { Link } from 'react-router-dom'
 import './styles.scss'
 
 const NotFound = () => {
@@ -12,7 +13,9 @@ const NotFound = () => {
 					Sorry but the page you are looking for does not exist, have been removed, name changed or
 					is temporarity unavailable.
 				</span>
-				<div className='btn'>Back To Home Page</div>
+				<Link className='link' to='/'>
+					<div className='btn'>Back To Home Page</div>
+				</Link>
 			</div>
 		</Container>
 	)

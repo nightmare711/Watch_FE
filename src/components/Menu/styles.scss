@@ -1,3 +1,4 @@
+@import "../../styles/index.scss";
 .menu {
     width: 100%;
     display: flex;
@@ -9,12 +10,19 @@
         display: flex;
         flex-direction: row;
         list-style: none;
-        li {
-            font-size: 18px;
-            font-weight: 600;
-            &:not(:last-child) {
-                margin-right:40px;
+        .link{
+            text-decoration: none;
+            li {
+                font-size: 18px;
+                font-weight: 600;
+                color: white;
+                margin-right: 40px;
+                transition: all .3s;
+            }
+            li:hover {
+                color: $color-normal-brown;
             }
         }
+        
     }
 }

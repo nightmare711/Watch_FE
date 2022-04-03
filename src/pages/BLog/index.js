@@ -3,6 +3,7 @@ import { Container, BlogCard } from 'components'
 import Blog_1 from 'assets/home/blog_1.webp'
 import Blog_2 from 'assets/home/blog_2.webp'
 import Blog_3 from 'assets/home/blog_3.webp'
+import { Link } from 'react-router-dom'
 import './styles.scss'
 
 const Blog = () => {
@@ -10,7 +11,9 @@ const Blog = () => {
 		<div>
 			<span className='page'>Blog</span>
 			<div className='site__map'>
-				<span className='site'>Home</span>
+				<Link className='site__link' to='/'>
+					<span className='site'>Home</span>
+				</Link>
 				<span className='slash'>/</span>
 				<span className='site'>Blog</span>
 			</div>

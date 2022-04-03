@@ -9,6 +9,7 @@ import YouTubeIcon from '@mui/icons-material/YouTube'
 import InstagramIcon from '@mui/icons-material/Instagram'
 import GoogleIcon from '@mui/icons-material/Google'
 import FavoriteIcon from '@mui/icons-material/Favorite'
+import { Link } from 'react-router-dom'
 import './styles.scss'
 
 export const Footer = () => {
@@ -34,21 +35,45 @@ export const Footer = () => {
 						</div>
 						<div className='information'>
 							<h3 className='title'>Information</h3>
-							<span className='text hovered'>About Us</span>
-							<span className='text hovered'>Delivery Information</span>
-							<span className='text hovered'>Privacy Policy</span>
-							<span className='text hovered'>Terms and Conditions</span>
-							<span className='text hovered'>Gift Certificates</span>
-							<span className='text hovered'>Contact Us</span>
+							<Link className='links' to='/about-us'>
+								<span className='text hovered'>About Us</span>
+							</Link>
+							<Link className='links' to='/not-found'>
+								<span className='text hovered'>Delivery Information</span>
+							</Link>
+							<Link className='links' to='/not-found'>
+								<span className='text hovered'>Privacy Policy</span>
+							</Link>
+							<Link className='links' to='/not-found'>
+								<span className='text hovered'>Terms and Conditions</span>
+							</Link>
+							<Link className='links' to='/not-found'>
+								<span className='text hovered'>Gift Certificates</span>
+							</Link>
+							<Link className='links' to='/contact-us'>
+								<span className='text hovered'>Contact Us</span>
+							</Link>
 						</div>
 						<div className='extras'>
 							<h3 className='title'>Extras</h3>
-							<span className='text hovered'>Brands</span>
-							<span className='text hovered'>Gift Certificates</span>
-							<span className='text hovered'>Affiliate</span>
-							<span className='text hovered'>Specials</span>
-							<span className='text hovered'>My Account</span>
-							<span className='text hovered'>Returns</span>
+							<Link className='links' to='/not-found'>
+								<span className='text hovered'>Brands</span>
+							</Link>
+							<Link className='links' to='/not-found'>
+								<span className='text hovered'>Gift Certificates</span>
+							</Link>
+							<Link className='links' to='/not-found'>
+								<span className='text hovered'>Affiliate</span>
+							</Link>
+							<Link className='links' to='/not-found'>
+								<span className='text hovered'>Specials</span>
+							</Link>
+							<Link className='links' to='/not-found'>
+								<span className='text hovered'>My Account</span>
+							</Link>
+							<Link className='links' to='/not-found'>
+								<span className='text hovered'>Returns</span>
+							</Link>
 						</div>
 						<div className='Custom__Products'>
 							<h3 className='title'>Custom Products</h3>

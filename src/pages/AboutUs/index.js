@@ -7,6 +7,7 @@ import icon_3 from '../../assets/AboutUs/icon_3.webp'
 import icon_4 from '../../assets/AboutUs/icon_4.webp'
 import CountUp from 'react-countup'
 import ProgressBar from '@ramonak/react-progress-bar'
+import { Link } from 'react-router-dom'
 import './styles.scss'
 
 const AboutUs = () => {
@@ -14,9 +15,13 @@ const AboutUs = () => {
 		<div className='about__us'>
 			<span className='page'>About Us</span>
 			<div className='site__map'>
-				<span className='site'>Home</span>
+				<Link className='site__link' to='/'>
+					<span className='site__home'>Home</span>
+				</Link>
 				<span className='slash'>/</span>
-				<span className='site'>About</span>
+				<Link className='site__link' to='/about-us'>
+					<span className='site'>About</span>
+				</Link>
 			</div>
 			<div className='about__text'>
 				<img src={Banner_1} alt='About Us' />

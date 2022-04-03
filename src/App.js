@@ -34,7 +34,7 @@ function App() {
 					<Route component={Wishlist} path='/wishlist' exact />
 					<Route component={MyAccount} path='/my-account' exact />
 					<Route component={FAQ} path='/faq' exact />
-					<Route component={NotFound} path='/404' exact />
+					<Route component={NotFound} path='/not-found' exact />
 					<Route component={Blog} path='/blog' exact />
 					<Route component={BlogDetail} path='/blog/blog-detail' exact />
 				</Switch>
