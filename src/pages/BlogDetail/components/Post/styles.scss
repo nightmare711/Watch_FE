@@ -1,0 +1,33 @@
+@import '../../../../styles/index.scss';
+.post__container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .post__image{
+        height: 60px;
+        margin-right: 30px;
+        width: 100px;
+    }
+    .post__detail{
+        display: flex;
+        flex-direction: column;
+        .post__title{
+            font-size: 18px;
+            margin-bottom: 10px;
+            transition: all .3s;
+            color: #afafaf;
+            cursor: pointer;
+        }
+        .post__tilte:hover{
+            color: $color-normal-brown !important;
+        }
+        .post__date{
+            font-size: 13px;
+            color: #afafaf;
+        }
+    }
+}
+.post__container:not(:last-child)
+{
+    margin-bottom: 20px;
+}

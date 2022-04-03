@@ -1,0 +1,25 @@
+@import '../../../../styles/index.scss';
+.related{
+    display: flex;
+    flex-direction: column;
+    &__image{
+        width: 260px;
+        height: auto;
+        margin-bottom: 15px;
+    }
+    &__name{
+        margin-bottom: 10px;
+        font-size: 20px;
+        color: #fff;
+        transition: all 0.3s;
+        cursor: pointer;
+    }
+    &__name:hover{
+        color: $color-normal-brown;
+    }
+    &__date{
+        color: #afafaf;
+        font-size: 15px;
+        font-style: italic;
+    }
+}
