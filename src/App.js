@@ -1,6 +1,6 @@
 import { ToastContainer } from 'react-toastify'
 import { Switch, BrowserRouter as Router, Route } from 'react-router-dom'
-import { Header, Menu, Footer } from 'components'
+import { Header, Menu, Footer, Loading } from 'components'
 import { Suspense, lazy } from 'react'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
@@ -20,7 +20,7 @@ const BlogDetail = lazy(() => import('./pages/BlogDetail'))
 function App() {
 	return (
 		<Router>
-			<Suspense fallback={<h1>Loading</h1>}>
+			<Suspense fallback={<Loading />}>
 				<Header />
 				<div className='line' />
 				<Menu />
