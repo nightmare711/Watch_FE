@@ -15,6 +15,7 @@ const MyAccount = lazy(() => import('./pages/MyAccount'))
 const FAQ = lazy(() => import('./pages/FAQ'))
 const NotFound = lazy(() => import('./pages/404'))
 const Blog = lazy(() => import('./pages/BLog'))
+const BlogDetail = lazy(() => import('./pages/BlogDetail'))
 
 function App() {
 	return (
@@ -35,6 +36,7 @@ function App() {
 					<Route component={FAQ} path='/faq' exact />
 					<Route component={NotFound} path='/404' exact />
 					<Route component={Blog} path='/blog' exact />
+					<Route component={BlogDetail} path='/blog/blog-detail' exact />
 				</Switch>
 				<Footer />
 				<ToastContainer
