@@ -5,6 +5,7 @@ import AccordionSummary from '@mui/material/AccordionSummary'
 import AccordionDetails from '@mui/material/AccordionDetails'
 import Typography from '@mui/material/Typography'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
+import { Link } from 'react-router-dom'
 import './styles.scss'
 
 const FAQ = () => {
@@ -12,7 +13,9 @@ const FAQ = () => {
 		<Container>
 			<span className='page'>Shop</span>
 			<div className='site__map'>
-				<span className='site'>Home</span>
+				<Link className='link__page' to='/'>
+					<span className='site'>Home</span>
+				</Link>
 				<span className='slash'>/</span>
 				<span className='site'>Shop</span>
 			</div>

@@ -1,5 +1,6 @@
 import React from 'react'
 import { MyMap, Container } from 'components'
+import { Link } from 'react-router-dom'
 
 import './styles.scss'
 
@@ -8,7 +9,9 @@ const ContactUs = () => {
 		<div className='contact__us'>
 			<span className='name'>Contact Us</span>
 			<div className='site__map'>
-				<span className='site'>Home</span>
+				<Link className='link__page' to='/'>
+					<span className='site'>Home</span>
+				</Link>
 				<span className='slash'>/</span>
 				<span className='site'>Contact</span>
 			</div>

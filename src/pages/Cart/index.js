@@ -2,6 +2,7 @@ import React from 'react'
 import { Container } from 'components'
 import Mock_1 from '../../assets/Cart/mock_1.webp'
 import Mock_2 from '../../assets/Cart/mock_2.webp'
+import { Link } from 'react-router-dom'
 import './styles.scss'
 
 const mock = [
@@ -22,7 +23,9 @@ const Cart = () => {
 		<Container>
 			<span className='page'>Your Cart</span>
 			<div className='site__map'>
-				<span className='site'>Home</span>
+				<Link className='link__page' to='/'>
+					<span className='site'>Home</span>
+				</Link>
 				<span className='slash'>/</span>
 				<span className='site'>Cart</span>
 			</div>

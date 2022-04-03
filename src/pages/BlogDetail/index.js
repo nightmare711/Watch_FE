@@ -14,6 +14,7 @@ import TwitterIcon from '@mui/icons-material/Twitter'
 import YouTubeIcon from '@mui/icons-material/YouTube'
 import InstagramIcon from '@mui/icons-material/Instagram'
 import GoogleIcon from '@mui/icons-material/Google'
+import { Link } from 'react-router-dom'
 import './styles.scss'
 
 const mock = [
@@ -61,9 +62,13 @@ const BlogDetail = () => {
 		<Container>
 			<span className='name'>Blog Details</span>
 			<div className='site__map'>
-				<span className='site'>Home</span>
+				<Link className='link__page' to='/'>
+					<span className='site'>Home</span>
+				</Link>
 				<span className='slash'>/</span>
-				<span className='site'>Blog</span>
+				<Link className='link__page' to='/blog'>
+					<span className='site'>Blog</span>
+				</Link>
 				<span className='slash'>/</span>
 				<span className='site'>Blog Details</span>
 			</div>
@@ -78,14 +83,21 @@ const BlogDetail = () => {
 					</div>
 					<span className='title'>Blog Archives</span>
 					<div className='dates'>
-						<span className='date'>March 2022(5)</span>
-						<span className='date'>March 2021(5)</span>
-						<span className='date'>March 2019(5)</span>
-						<span className='date'>March 2018(5)</span>
-						<span className='date'>March 2017(5)</span>
-						<span className='date'>March 2016(5)</span>
-						<span className='date'>March 2015(5)</span>
-						<span className='date'>March 2014(5)</span>
+						<Link className='link__blog' to='/not-found'>
+							<span className='date'>March 2022(5)</span>
+						</Link>
+						<Link className='link__blog' to='/not-found'>
+							<span className='date'>March 2021(5)</span>
+						</Link>
+						<Link className='link__blog' to='/not-found'>
+							<span className='date'>March 2020(5)</span>
+						</Link>
+						<Link className='link__blog' to='/not-found'>
+							<span className='date'>March 2019(5)</span>
+						</Link>
+						<Link className='link__blog' to='/not-found'>
+							<span className='date'>March 2018(5)</span>
+						</Link>
 					</div>
 					<span className='title'>Recent Posts</span>
 					<div className='posts'>
