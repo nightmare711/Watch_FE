@@ -1,0 +1,179 @@
+@import '../../styles/index.scss';
+.page{
+    text-align: center;
+    margin-top: 30px;
+    font-size:48px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content:center;
+}
+.site__map{
+    text-align: center;
+    margin-bottom: 60px;
+    .site__link{
+        text-decoration: none;
+    }
+    
+    .site{
+        color: $color-normal-brown;
+        cursor: pointer;
+        &__home{
+            color: #afafaf;
+            transition: all .3s;
+        }
+    }
+    .site__home:hover{
+        color: $color-normal-brown;
+    }
+    .slash{
+        margin: 0 5px;
+        font-size: #afafaf;
+    }
+}
+.tabs{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 100px;
+    .tab__list{
+        width: 30%;
+        margin-right: 75px;
+        .list{
+            display: flex;
+            flex-direction: column;
+            list-style-type: none;
+            width: 100%;
+            padding: 25px;
+            background-color: #343434;
+            margin: 0;
+            .tab{
+                height: 40px;
+                transition: all .3s;
+                cursor: pointer;
+                font-size: 15px;
+                margin: 0;
+                display: flex;  
+                align-items: center;
+                padding: 10px 0;
+            }
+            .tab:not(:last-child){
+                border-bottom: 1px solid rgb(59, 59, 59);
+            }
+            .tab:hover{
+                color: $color-normal-brown;
+            }
+        }
+    }
+    .tab__content{
+        width: 100%;
+        .tab__detail{
+            display: flex;
+            flex-direction: column;
+            .text{
+                color: #afafaf;
+                margin-bottom: 10px;
+            }
+            
+        }
+        .orders{
+            background-color: #343434;
+            color: #afafaf;
+            width: 100%;
+            .table__container{
+                width: 100%;
+                border-collapse: collapse;
+                margin-bottom: 50px;
+                border-style: hidden;
+                border-bottom: 1px solid $color-primary;
+                .head{
+                    text-align: center;
+                    padding: 20px 30px;
+                    font-size: 15px;
+                    text-transform: uppercase;
+                    border: 1px solid $color-primary;
+                    color: white;
+                    border-bottom: 1px solid white;
+                }
+                .item{
+                    text-align: center;
+                    font-size: 15px;
+                    padding: 15px 20px;
+                    border: 1px solid $color-primary;
+                    .product__img{
+                        width: 75px;
+                        height: 75px;
+                    }
+                    .quantity{
+                        width: 30px;
+                        height: 50px;
+                        border-radius: 5px;
+                        outline: none;
+                        border: none;
+                        background-color: #2e2e2e;
+                        padding: 0 20px;
+                        color: #afafaf;
+                        font-size: 23px;
+                    }
+                }
+            }
+        }
+    }    
+}
+.internal__link{
+    color: #a43d21;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+.internal__link:hover{
+    color: $color-normal-brown;
+}
+.btn {
+    width: fit-content;
+    background-color:  $color-normal-brown;
+    border-radius: 5px;
+    text-align: center;
+    padding:12px 15px;
+    margin: auto;
+    cursor: pointer;
+    transition: all 0.3s;
+    border-radius: 5px;
+    color: white;
+}
+.btn:hover{
+    background-color: #6c757d;
+}
+.left{
+    margin: 0;
+    margin-bottom: 20px;
+}
+.mb-10{
+    margin-bottom: 10px;
+}
+.m-20{
+    margin: 20px 0;
+    font-size: 20px;
+}
+.background{
+    background-color: #343434;
+    padding: 20px;
+}
+.input{
+    height: 40px;
+    background-color: #242424;
+    padding: 1px 2px 1px 15px;
+    outline: none;
+    border: 1px solid #afafaf;
+    border-radius: 5px; 
+    color: #2b2a2a;
+    margin-bottom: 10px;
+}
+.w-50{
+    width: 50%;
+}
+.title{
+    font-size: 25px;
+    color: $color-normal-brown;
+    margin: 20px 0;
+}
+.mt-20{
+    margin-top: 20px;
+}
