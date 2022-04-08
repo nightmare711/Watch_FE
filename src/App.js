@@ -37,6 +37,7 @@ function App() {
 					<Route component={NotFound} path='/not-found' exact />
 					<Route component={Blog} path='/blog' exact />
 					<Route component={BlogDetail} path='/blog/blog-detail' exact />
+					<Route component={MyAccount} path='/my-account' exact />
 				</Switch>
 				<Footer />
 				<ToastContainer
