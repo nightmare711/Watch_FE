@@ -3,9 +3,11 @@ import { Container } from 'components'
 import { Search, Favorite, ShoppingCart } from '@mui/icons-material'
 import Logo from 'assets/logo.webp'
 import Icon_Phone from 'assets/home/icon__phone.webp'
+import { Link } from 'react-router-dom'
+import enhance from '../../hoc/withCart'
 import './styles.scss'
 
-export const Header = () => {
+const HeaderComponent = ({ price }) => {
 	return (
 		<Container>
 			<div className='header'>
@@ -24,12 +26,16 @@ export const Header = () => {
 					<div className='icon-container'>
 						<Favorite />
 					</div>
-					<div className='icon-container chart'>
-						<ShoppingCart />
-						<div className='total-price'>80.00$</div>
-					</div>
+					<Link to='/cart'>
+						<div className='icon-container chart'>
+							<ShoppingCart />
+							<div className='total-price'>{price}$</div>
+						</div>
+					</Link>
 				</div>
 			</div>
 		</Container>
 	)
 }
+
+export const Header = enhance(HeaderComponent)

@@ -1,40 +1,29 @@
 import React from 'react'
 import { Container } from 'components'
-import { Link } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import ImageGallery from 'react-image-gallery'
 import StarIcon from '@mui/icons-material/Star'
 import CheckCircleIcon from '@mui/icons-material/CheckCircle'
 import StarOutlineIcon from '@mui/icons-material/StarOutline'
-import BigWatch1 from '../../assets/Watches/BigWatch1.webp'
-import BigWatch2 from '../../assets/Watches/BigWatch2.webp'
-import BigWatch3 from '../../assets/Watches/BigWatch3.webp'
-import BigWatch4 from '../../assets/Watches/BigWatch4.webp'
-import SmallWatch1 from '../../assets/Watches/SmallWatch1.webp'
-import SmallWatch2 from '../../assets/Watches/SmallWatch2.webp'
-import SmallWatch3 from '../../assets/Watches/SmallWatch3.webp'
-import SmallWatch4 from '../../assets/Watches/SmallWatch4.webp'
+import { useGetProductById } from 'queries/useProduct'
+import enhance from 'hoc/withCart'
 import './styles.scss'
 
-const images = [
-	{
-		original: BigWatch1,
-		thumbnail: SmallWatch1,
-	},
-	{
-		original: BigWatch2,
-		thumbnail: SmallWatch2,
-	},
-	{
-		original: BigWatch3,
-		thumbnail: SmallWatch3,
-	},
-	{
-		original: BigWatch4,
-		thumbnail: SmallWatch4,
-	},
-]
-
-const ProductDetail = () => {
+const ProductDetail = ({ onAddToCart }) => {
+	const { id } = useParams()
+	const { data: product } = useGetProductById(id)
+	const [images, setImages] = React.useState([])
+	const [amount, setAmount] = React.useState(0)
+	React.useEffect(() => {
+		const tempImages = []
+		for (let i = 0; i < product?.imgPath.length; i++) {
+			tempImages.push({
+				original: product?.imgPath[i],
+				thumbnail: product?.imgPath[i],
+			})
+		}
+		setImages(tempImages)
+	}, [product])
 	return (
 		<Container>
 			<span className='name'>Product Details</span>
@@ -61,7 +50,7 @@ const ProductDetail = () => {
 					/>
 				</div>
 				<div className='product-info'>
-					<span className='product-name'>Aliquam Lobortis</span>
+					<span className='product-name'>{product?.name}</span>
 					<div className='product-rating'>
 						<StarIcon className='star' />
 						<StarIcon className='star' />
@@ -69,20 +58,27 @@ const ProductDetail = () => {
 						<StarIcon className='star' />
 						<StarOutlineIcon className='star' />
 					</div>
-					<span className='text'>Brand: Apple</span>
+					<span className='text'>Brand: {product?.type}</span>
 					<span className='text'>Product Code: Watches</span>
 					<span className='text'>Reward Points: 600</span>
 					<span className='text'>Availability: In Stock</span>
-					<span className='price'>$550.00</span>
+					<span className='price'>${product?.price}.00</span>
 					<div className='line'></div>
 					<div className='stock'>
 						<CheckCircleIcon className='icon' />
-						<span className='text'>200 in Stock</span>
+						<span className='text'>{product?.quantity} in Stock</span>
 					</div>
 					<div className='qty'>
 						<span className='text'>Qty:</span>
-						<input className='quantity' type='number' />
-						<div className='btn-add'>Add To Cart</div>
+						<input
+							onChange={(e) => setAmount(e.target.value)}
+							className='quantity'
+							type='number'
+							defaultValue={1}
+						/>
+						<div onClick={() => onAddToCart(product, amount)} className='btn-add'>
+							Add To Cart
+						</div>
 					</div>
 					<span className='wishlist'>+Add to wishlist</span>
 					<span className='tag'>Tags: Sport, Luxury</span>
@@ -91,4 +87,4 @@ const ProductDetail = () => {
 		</Container>
 	)
 }
-export default ProductDetail
+export default enhance(ProductDetail)

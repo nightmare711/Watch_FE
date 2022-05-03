@@ -3,6 +3,7 @@ import { Container } from 'components'
 import Mock_1 from '../../assets/Cart/mock_1.webp'
 import Mock_2 from '../../assets/Cart/mock_2.webp'
 import { Link } from 'react-router-dom'
+import enhance from 'hoc/withCart'
 import './styles.scss'
 
 const mock = [
@@ -18,7 +19,7 @@ const mock = [
 	},
 ]
 
-const Cart = () => {
+const Cart = ({ cart, price, onRemoveFromCart }) => {
 	return (
 		<Container>
 			<span className='page'>Your Cart</span>
@@ -39,18 +40,22 @@ const Cart = () => {
 						<th className='head'>Quantity</th>
 						<th className='head'>Total</th>
 					</tr>
-					{mock.map((item) => (
+					{cart.map((item) => (
 						<tr>
-							<td className='item'>x</td>
-							<td className='item'>
-								<img className='product__img' src={item.image} alt='Product Image' />
+							<td onClick={() => onRemoveFromCart(item)} className='item'>
+								x
 							</td>
-							<td className='item'>{item.name}</td>
-							<td className='item'>{item.unit}$</td>
 							<td className='item'>
-								<input className='quantity' type='number' value='1' />
+								<img className='product__img' src={item?.imgPath[0]} alt='Product Image' />
 							</td>
-							<td className='item'>{item.unit}</td>
+							<td className='item'>
+								<Link to={`/detail/${item._id}`}>{item?.name}</Link>
+							</td>
+							<td className='item'>{item?.price}$</td>
+							<td className='item'>
+								<input className='quantity' type='number' value={item?.amount} />
+							</td>
+							<td className='item'>{item?.price * item?.amount}.00$</td>
 						</tr>
 					))}
 				</table>
@@ -67,15 +72,15 @@ const Cart = () => {
 				<span className='total__head'>Cart totals</span>
 				<div className='total__item'>
 					<span>Subtotal</span>
-					<span className='total__price'>$140.00</span>
+					<span className='total__price'>${price}.00</span>
 				</div>
 				<div className='total__item'>
 					<span>Shipping</span>
-					<span className='total__price'>$140.00</span>
+					<span className='total__price'>$20.00</span>
 				</div>
 				<div className='total__item'>
 					<span>Total</span>
-					<span className='total__price'>$140.00</span>
+					<span className='total__price'>${price + 20}.00</span>
 				</div>
 				<div className='btn'>Proceed To Checkout</div>
 			</div>
@@ -83,4 +88,4 @@ const Cart = () => {
 	)
 }
 
-export default Cart
+export default enhance(Cart)
