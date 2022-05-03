@@ -118,3 +118,27 @@
         }
     }
 }
+.related-product{
+    margin-bottom: 50px;
+    .title{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 30px;
+        .related{
+            color: white;
+            font-size: 30px;
+            width: 30%;
+        }
+        .h-10{
+            height: 3px;
+        }
+    }
+}
+.slider{
+    display: flex;
+    margin: auto;
+    width: 85%;
+}.slick-next{
+    display: none;
+}
