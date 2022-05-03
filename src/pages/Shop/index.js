@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import { Container, ProductCard, Sidebar } from 'components'
 import Product1 from '../../assets/Product/watch1.webp'
 import Product2 from '../../assets/Product/watch2.webp'
-
+import { useGetProduct } from 'queries/useProduct'
 const mock = [
 	{
 		image: Product1,
@@ -49,6 +49,7 @@ const mock = [
 ]
 
 const Shop = () => {
+	const { data: products } = useGetProduct()
 	return (
 		<Container>
 			<span className='page'>Shop</span>
@@ -64,8 +65,8 @@ const Shop = () => {
 					<Sidebar />
 				</div>
 				<div className='product__container'>
-					{mock.map((item) => (
-						<ProductCard image={item.image} name={item.name} price={item.price} />
+					{products?.map((item) => (
+						<ProductCard product={item} />
 					))}
 				</div>
 			</div>

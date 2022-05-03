@@ -1,17 +1,21 @@
 import React from 'react'
 import StarIcon from '@mui/icons-material/Star'
 import StarOutlineIcon from '@mui/icons-material/StarOutline'
+import withCart from 'hoc/withCart'
 import './styles.scss'
+import { Link } from 'react-router-dom'
 
-export const ProductCard = (props) => {
+export const Product = ({ product, onAddToCart, cart }) => {
 	return (
 		<div className='product'>
-			<img className='product__image' src={props.image} alt="Product's Image" />
-			<div className='product__info'>
-				<span className='text'>Cartier</span>
-				<span className='product__name'>{props.name}</span>
-				<span className='product__price'>{props.price}</span>
-			</div>
+			<img className='product__image' src={product?.imgPath[0]} alt="Product's Image" />
+			<Link to={`/detail/${product?._id}`}>
+				<div className='product__info'>
+					<span className='text'>Cartier</span>
+					<span className='product__name'>{product?.name}</span>
+					<span className='product__price'>${product?.price}</span>
+				</div>
+			</Link>
 			<div className='line'></div>
 			<div className='btn__group'>
 				<div className='rating'>
@@ -21,8 +25,16 @@ export const ProductCard = (props) => {
 					<StarIcon className='star' />
 					<StarOutlineIcon className='star' />
 				</div>
-				<div className='btn'>Add to cart</div>
+				<div
+					onClick={() => {
+						onAddToCart(product, 1)
+					}}
+					className='btn'
+				>
+					Add to cart
+				</div>
 			</div>
 		</div>
 	)
 }
+export const ProductCard = withCart(Product)

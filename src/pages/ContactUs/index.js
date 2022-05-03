@@ -1,10 +1,23 @@
 import React from 'react'
 import { MyMap, Container } from 'components'
 import { Link } from 'react-router-dom'
+import { usePostEmail } from 'queries/useContact'
 
 import './styles.scss'
 
 const ContactUs = () => {
+	const [info, setInfo] = React.useState({
+		name: '',
+		email: '',
+		message: '',
+	})
+	const onPostEmail = usePostEmail(() =>
+		setInfo({
+			name: '',
+			email: '',
+			message: '',
+		})
+	)
 	return (
 		<div className='contact__us'>
 			<span className='name'>Contact Us</span>
@@ -20,12 +33,27 @@ const ContactUs = () => {
 				<div className='submit__contact'>
 					<span className='heading__text'>Tell us about your project</span>
 					<span className='text'>Your Name *</span>
-					<input className='textbox'></input>
+					<input
+						value={info.name}
+						onChange={(e) => setInfo({ ...info, name: e.target.value })}
+						className='textbox'
+					></input>
 					<span className='text'>Your Email *</span>
-					<input className='textbox'></input>
+					<input
+						value={info.email}
+						onChange={(e) => setInfo({ ...info, email: e.target.value })}
+						className='textbox'
+					></input>
 					<span className='text'>Enquiry *</span>
-					<textarea className='textarea' type='text'></textarea>
-					<div className='send-btn'>Send Email</div>
+					<textarea
+						value={info.message}
+						onChange={(e) => setInfo({ ...info, message: e.target.value })}
+						className='textarea'
+						type='text'
+					></textarea>
+					<div onClick={() => onPostEmail(info)} className='send-btn'>
+						Send Email
+					</div>
 				</div>
 			</Container>
 		</div>

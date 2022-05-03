@@ -2,9 +2,25 @@ import React from 'react'
 import { Container } from 'components'
 import { Link } from 'react-router-dom'
 import Paypal from '../../assets/Paypal/paypal.webp'
+import { useCreateOrder } from 'queries/useOrder'
+import enhance from 'hoc/withCart'
 import './styles.scss'
 
-const Checkout = () => {
+const Checkout = ({ price, cart, cartOrder }) => {
+	const [info, setInfo] = React.useState({
+		user_name: '',
+		address: '',
+		phone_number: '',
+		message: '',
+	})
+	const onCreateOrder = useCreateOrder(() =>
+		setInfo({
+			user_name: '',
+			address: '',
+			phone_number: '',
+			message: '',
+		})
+	)
 	return (
 		<Container>
 			<span className='page'>Checkout</span>
@@ -21,23 +37,43 @@ const Checkout = () => {
 					<div className='line'></div>
 					<div className='input-box'>
 						<span className='text'>Fullname *</span>
-						<input type='text' className='input' />
+						<input
+							value={info.user_name}
+							onChange={(e) => setInfo({ ...info, user_name: e.target.value })}
+							type='text'
+							className='input'
+						/>
 					</div>
 					<div className='input-box'>
 						<span className='text'>Address</span>
-						<input type='text' className='input' />
+						<input
+							value={info.address}
+							onChange={(e) => setInfo({ ...info, address: e.target.value })}
+							type='text'
+							className='input'
+						/>
 					</div>
 					<div className='input-box'>
 						<span className='text'>Phone</span>
-						<input type='text' className='input' />
+						<input
+							value={info.phone_number}
+							onChange={(e) => setInfo({ ...info, phone_number: e.target.value })}
+							type='text'
+							className='input'
+						/>
 					</div>
-					<div className='input-box'>
+					{/* <div className='input-box'>
 						<span className='text'>Email Address *</span>
 						<input type='text' className='input' />
-					</div>
+					</div> */}
 					<div className='input-box'>
 						<span className='text'>Order Notes</span>
-						<textarea type='text' className='input area' />
+						<textarea
+							value={info.message}
+							onChange={(e) => setInfo({ ...info, message: e.target.value })}
+							type='text'
+							className='input area'
+						/>
 					</div>
 				</div>
 				<div className='orders'>
@@ -59,7 +95,7 @@ const Checkout = () => {
 							</tr>
 							<tr>
 								<td className='text'>Order total</td>
-								<td className='amount'>$56.00</td>
+								<td className='amount'>${price}.00</td>
 							</tr>
 						</table>
 						<div className='radio-group'>
@@ -79,11 +115,16 @@ const Checkout = () => {
 								What is paypal?
 							</a>
 						</div>
-						<div className='btn place'>Place Order</div>
+						<div
+							onClick={() => onCreateOrder({ ...info, products: cartOrder, total: price })}
+							className='btn place'
+						>
+							Place Order
+						</div>
 					</div>
 				</div>
 			</div>
 		</Container>
 	)
 }
-export default Checkout
+export default enhance(Checkout)
