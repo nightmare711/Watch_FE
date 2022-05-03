@@ -13,7 +13,7 @@ export const Product = ({ product, onAddToCart, cart }) => {
 				<div className='product__info'>
 					<span className='text'>Cartier</span>
 					<span className='product__name'>{product?.name}</span>
-					<span className='product__price'>{product?.price}</span>
+					<span className='product__price'>${product?.price}</span>
 				</div>
 			</Link>
 			<div className='line'></div>

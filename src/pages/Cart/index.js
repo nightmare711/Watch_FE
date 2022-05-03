@@ -82,7 +82,9 @@ const Cart = ({ cart, price, onRemoveFromCart }) => {
 					<span>Total</span>
 					<span className='total__price'>${price + 20}.00</span>
 				</div>
-				<div className='btn'>Proceed To Checkout</div>
+				<Link to='/checkout'>
+					<div className='btn'>Proceed To Checkout</div>
+				</Link>
 			</div>
 		</Container>
 	)

@@ -5,6 +5,7 @@ import { toast } from 'react-toastify'
 const withCart = (WrappedComponent) => (props) => {
 	const data = React.useContext(DataContext)
 	const [price, setPrice] = React.useState(0)
+	const [cartOrder, setCartOrder] = React.useState([])
 	const onAddToCart = (product, amount) => {
 		const cart = data.cart
 		const indexOfProduct = cart.findIndex((item) => item._id === product._id)
@@ -27,10 +28,13 @@ const withCart = (WrappedComponent) => (props) => {
 	}
 	React.useEffect(() => {
 		const cart = data.cart
+		const tempCart = []
 		let priceTemp = 0
 		for (let i = 0; i < cart.length; i++) {
 			priceTemp = priceTemp + cart[i].price * cart[i].amount
+			tempCart.push({ id: cart[i]._id, amount: cart[i].amount })
 		}
+		setCartOrder(tempCart)
 		setPrice(priceTemp)
 	}, [data.count])
 	return (
@@ -41,6 +45,7 @@ const withCart = (WrappedComponent) => (props) => {
 				onAddToCart,
 				onRemoveFromCart,
 				price,
+				cartOrder,
 			}}
 		/>
 	)
