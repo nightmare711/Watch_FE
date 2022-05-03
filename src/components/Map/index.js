@@ -14,7 +14,7 @@ const center = {
 const Map = () => {
 	const { isLoaded } = useJsApiLoader({
 		id: 'google-map-script',
-		googleMapsApiKey: 'AIzaSyA3apnGtmW_IGf5OjrW0lH713BCfjwn7vo',
+		googleMapsApiKey: 'AIzaSyDNI_ZWPqvdS6r6gPVO50I4TlYkfkZdXh8',
 	})
 
 	const [map, setMap] = React.useState(null)
@@ -33,8 +33,7 @@ const Map = () => {
 		<GoogleMap
 			mapContainerStyle={containerStyle}
 			center={center}
-			zoom={8}
-			onLoad={onLoad}
+			zoom={16}
 			onUnmount={onUnmount}
 		></GoogleMap>
 	) : (

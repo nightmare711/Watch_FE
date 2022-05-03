@@ -11,13 +11,13 @@ import './styles.scss'
 const FAQ = () => {
 	return (
 		<Container>
-			<span className='page'>Shop</span>
+			<span className='page'>FAQ</span>
 			<div className='site__map'>
 				<Link className='link__page' to='/'>
 					<span className='site'>Home</span>
 				</Link>
 				<span className='slash'>/</span>
-				<span className='site'>Shop</span>
+				<span className='site'>FAQ</span>
 			</div>
 			<div className='intro__container'>
 				<span className='intro'>
