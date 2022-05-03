@@ -6,7 +6,7 @@ export const Sidebar = () => {
 	return (
 		<div className='sidebar'>
 			<span className='head'>Refine Search</span>
-			<span className='title'>Price</span>
+			{/* <span className='title'>Price</span>
 			<div className='price__filter'>
 				<div className='price__group'>
 					<input name='price' type='radio' checked />
@@ -24,7 +24,7 @@ export const Sidebar = () => {
 					<input name='price' type='radio' />
 					<span>$700 - $1000 </span>
 				</div>
-			</div>
+			</div> */}
 			<img className='banner' src={Banner} alt='Image Banner' />
 		</div>
 	)
