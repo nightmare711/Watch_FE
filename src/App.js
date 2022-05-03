@@ -16,6 +16,7 @@ const FAQ = lazy(() => import('./pages/FAQ'))
 const NotFound = lazy(() => import('./pages/404'))
 const Blog = lazy(() => import('./pages/BLog'))
 const BlogDetail = lazy(() => import('./pages/BlogDetail'))
+const Shop = lazy(() => import('./pages/Shop'))
 
 function App() {
 	return (
@@ -38,6 +39,7 @@ function App() {
 					<Route component={Blog} path='/blog' exact />
 					<Route component={BlogDetail} path='/blog/blog-detail' exact />
 					<Route component={MyAccount} path='/my-account' exact />
+					<Route component={Shop} path='/shop' exact />
 				</Switch>
 				<Footer />
 				<ToastContainer
@@ -51,7 +53,6 @@ function App() {
 					draggable
 					pauseOnHover
 				/>
-				{/* Same as */}
 				<ToastContainer />
 			</Suspense>
 		</Router>

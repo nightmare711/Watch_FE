@@ -1,0 +1,39 @@
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    .head{
+        font-size: 30px;
+    }
+    .title{
+        margin: 25px 0;
+        font-size: 25px;     
+    }   
+    .price__group:not(:last-child){
+        margin-bottom: 20px;
+    }
+    .price__group{
+        color: #afafaf;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .checkbox__group:not(:last-child){
+        margin-bottom: 20px;
+    }
+    .checkbox__group{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        color: #afafaf;
+    }
+    .banner{
+        margin-top: 20px;
+        width: 90%;
+        transition: all 0.3s;
+        cursor: pointer;
+    }
+    .banner:hover{
+        transform: scale(1.05);
+    }
+
+}
