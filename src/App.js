@@ -18,6 +18,7 @@ const Blog = lazy(() => import('./pages/BLog'))
 const BlogDetail = lazy(() => import('./pages/BlogDetail'))
 const Shop = lazy(() => import('./pages/Shop'))
 const ProductDetail = lazy(() => import('./pages/ProductDetail'))
+const Checkout = lazy(() => import('./pages/Checkout'))
 
 function App() {
 	return (
@@ -42,6 +43,7 @@ function App() {
 					<Route component={MyAccount} path='/my-account' exact />
 					<Route component={Shop} path='/shop' exact />
 					<Route component={ProductDetail} path='/shop/product-detail' exact />
+					<Route component={Checkout} path='/checkout' exact />
 				</Switch>
 				<Footer />
 				<ToastContainer
