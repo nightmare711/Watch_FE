@@ -1,6 +1,12 @@
-.loading{
-   display: block;
-   margin-left: auto;
-   margin-right: auto;
-   width: 50%;
+.loading__container{
+   width: 100ww;
+   height: 100wh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   .loading{
+      display: block;
+      margin: auto;
+      width: 100px;
+   }
 }

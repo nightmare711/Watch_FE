@@ -4,7 +4,7 @@ import './styles.scss'
 
 export const Loading = () => {
 	return (
-		<div>
+		<div className='loading__container'>
 			<img className='loading' src={loading} />
 		</div>
 	)

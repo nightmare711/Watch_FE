@@ -1,0 +1,120 @@
+@import '../../styles/index.scss';
+@import "~react-image-gallery/styles/scss/image-gallery.scss";
+.name{
+    margin-top: 30px;
+    font-size:48px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content:center;
+}
+.site__map{
+    text-align: center;
+    margin-bottom: 60px;
+    .site{
+        color: #afafaf;
+        cursor: pointer;
+        transition: all .3s;
+    }
+    .last{
+        color: $color-normal-brown;
+    }
+    .site:hover{
+        color: $color-normal-brown;
+    }
+    .slash{
+        margin: 0 5px;
+        font-size: #afafaf;
+    }
+}
+.detail__container{
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: row;
+    .product-image{
+        width: 50%;
+        .image-gallery{
+            width: 90%;
+        }
+    }
+    .product-info{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        .product-name{
+            font-size: 40px;
+            color: white;
+        }
+        .star{
+            font-size:17px;
+            color: $color-normal-brown;
+            margin: 20px 0;
+        }
+        .text{
+            font-size: 15px;
+            color: #afafaf;
+            margin: 3px 0;
+        }
+        .price {
+            font-size: 30px;
+            color: $color-normal-brown;
+            margin: 20px 0;
+        }
+        .stock{
+            color: #afafaf;
+            display: flex;
+            flex-direction: row;
+            margin-top: 20px;
+            align-items: center;
+            .icon{
+                margin-right: 5px;
+            }
+        }
+        .qty{
+            margin: 10px 0;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            .text{
+                margin-right: 10px;
+            }
+            .quantity{
+                height: 50px;
+                width: 50px;
+                font-size: 20px;
+                border-radius:5px;
+                padding-left: 10px;
+                background-color: #2e2e2e;
+                border: none;
+                color: #afafaf;
+                margin-right: 15px;
+            }
+            .btn-add {
+                width: fit-content;
+                background-color:  $color-normal-brown;
+                border-radius: 5px;
+                text-align: center;
+                padding:14px 20px;
+                margin:10px 0px;
+                cursor: pointer;
+                transition: all 0.3s;
+                border-radius: 5px;
+                color: white;
+            }
+            .btn-add:hover{
+                background-color: #6c757d;
+            }
+        }
+        .wishlist{
+            font-size: 17px;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+        .wishlist:hover{
+            color: $color-normal-brown;
+        }
+        .tag{
+            color: #afafaf;
+            margin: 15px 0;
+        }
+    }
+}

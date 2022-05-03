@@ -70,7 +70,7 @@ const BlogDetail = () => {
 					<span className='site'>Blog</span>
 				</Link>
 				<span className='slash'>/</span>
-				<span className='site'>Blog Details</span>
+				<span className='site last'>Blog Details</span>
 			</div>
 			<div className='blog__container'>
 				<div className='searching'>
