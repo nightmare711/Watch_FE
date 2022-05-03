@@ -1,10 +1,88 @@
 import React from 'react'
+import { Container, ProductCard } from 'components'
+import { Link } from 'react-router-dom'
 import { Container } from 'components'
 import { Link, useParams } from 'react-router-dom'
 import ImageGallery from 'react-image-gallery'
+import Slider from 'react-slick'
 import StarIcon from '@mui/icons-material/Star'
 import CheckCircleIcon from '@mui/icons-material/CheckCircle'
 import StarOutlineIcon from '@mui/icons-material/StarOutline'
+import BigWatch1 from '../../assets/Watches/BigWatch1.webp'
+import BigWatch2 from '../../assets/Watches/BigWatch2.webp'
+import BigWatch3 from '../../assets/Watches/BigWatch3.webp'
+import BigWatch4 from '../../assets/Watches/BigWatch4.webp'
+import SmallWatch1 from '../../assets/Watches/SmallWatch1.webp'
+import SmallWatch2 from '../../assets/Watches/SmallWatch2.webp'
+import SmallWatch3 from '../../assets/Watches/SmallWatch3.webp'
+import SmallWatch4 from '../../assets/Watches/SmallWatch4.webp'
+import Product1 from '../../assets/Product/watch1.webp'
+import Product2 from '../../assets/Product/watch2.webp'
+import './styles.scss'
+
+const images = [
+	{
+		original: BigWatch1,
+		thumbnail: SmallWatch1,
+	},
+	{
+		original: BigWatch2,
+		thumbnail: SmallWatch2,
+	},
+	{
+		original: BigWatch3,
+		thumbnail: SmallWatch3,
+	},
+	{
+		original: BigWatch4,
+		thumbnail: SmallWatch4,
+	},
+]
+
+const mock = [
+	{
+		image: Product1,
+		name: 'Egestas dapibus',
+		price: '28.00$',
+	},
+	{
+		image: Product2,
+		name: 'Neque porttitor',
+		price: '28.00$',
+	},
+	{
+		image: Product1,
+		name: 'Egestas dapibus',
+		price: '28.00$',
+	},
+	{
+		image: Product2,
+		name: 'Neque porttitor',
+		price: '28.00$',
+	},
+	{
+		image: Product1,
+		name: 'Egestas dapibus',
+		price: '28.00$',
+	},
+	{
+		image: Product2,
+		name: 'Neque porttitor',
+		price: '28.00$',
+	},
+	{
+		image: Product1,
+		name: 'Egestas dapibus',
+		price: '28.00$',
+	},
+	{
+		image: Product2,
+		name: 'Neque porttitor',
+		price: '28.00$',
+	},
+]
+
+const ProductDetail = () => {
 import { useGetProductById } from 'queries/useProduct'
 import enhance from 'hoc/withCart'
 import './styles.scss'
@@ -83,6 +161,26 @@ const ProductDetail = ({ onAddToCart }) => {
 					<span className='wishlist'>+Add to wishlist</span>
 					<span className='tag'>Tags: Sport, Luxury</span>
 				</div>
+			</div>
+			<div className='related-product'>
+				<div className='title'>
+					<span className='related'>Related Products</span>
+					<div className='line h-10' />
+				</div>
+				<Slider
+					autoplay={true}
+					dots={false}
+					infinite={true}
+					slidesToScroll={1}
+					slidesToShow={4}
+					autoplaySpeed={3000}
+					pauseOnHover={false}
+					className='slider'
+				>
+					{mock.map((item) => (
+						<ProductCard image={item.image} name={item.name} price={item.price} />
+					))}
+				</Slider>
 			</div>
 		</Container>
 	)
